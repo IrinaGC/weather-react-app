@@ -6,9 +6,9 @@ function App() {
   <div className="App">
     <MainCard />
     <p className="footer" >
-      <a href="https://github.com/IrinaGC/weather-app-react.git" >
+      <a href="https://github.com/IrinaGC/weather-react-app.git">
         Open - source code </a>
-      by Irina G.C.at <a href="https://www.shecodes.io/" >
+      by Irina G.C. at <a href="https://www.shecodes.io/" >
         SheCodes </a>
     </p >
   </div>
