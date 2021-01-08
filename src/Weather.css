@@ -1,0 +1,27 @@
+ul {
+    list-style: none;
+    background: transparent;
+}
+
+li:first-letter {
+    text-transform: capitalize;
+}
+
+.currentWeather {
+    font-size: 70px;
+}
+
+.currentWeather .active {
+    color: white;
+    cursor: default;
+}
+
+#fahrenheit,
+#celcius {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#currentState {
+    font-weight: 500;
+}

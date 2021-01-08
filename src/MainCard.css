@@ -1,0 +1,8 @@
+.card {
+    width: 752.5px;
+    background-image: linear-gradient(15deg, #13547a 10%, #80d0c7 70%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    border: 2px solid rgba(102, 102, 102, 0.658);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
