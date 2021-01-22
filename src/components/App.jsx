@@ -1,11 +1,17 @@
 import './App.css';
-import MainCard from "./MainCard";
+import Form from "./Form";
+import ControlledTabs from "./ControlledTabs";
 
 function App() {
   return (
   <div className="App">
     <div className ="container">
-    <MainCard />
+      <div className = "card">
+        <div className = "card-body CardBody">
+          <Form defaultCity="London" />
+          <ControlledTabs />
+        </div>
+      </div>
     <p className="footer" >
       <a href="https://github.com/IrinaGC/weather-react-app.git" rel="noreferrer" target="_blank">
         Open - source code </a>
