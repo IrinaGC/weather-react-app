@@ -10,8 +10,6 @@ export default function Weather(props) {
         <h6 className = "card-title">
                 Day - Time
         </h6>
-
-
     <div class="row">
         <p className = "card-text col-6" >
             <span className = "currentWeather" > 

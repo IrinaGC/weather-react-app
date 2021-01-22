@@ -5,10 +5,10 @@ import "./Form.css";
 
 export default function Form(props) {
     const [weatherData, setWeatherData] = useState({ready: false});
-    const [city, setCity] = useState(props.defaultCity)
+    const [city, setCity] = useState(props.defaultCity);
 
     function handleResponse (response){
-        console.log(response.data)
+        console.log(response.data);
         setWeatherData({
             ready: true,
             country: response.data.sys.country,
@@ -27,7 +27,7 @@ export default function Form(props) {
     
     function handleSubmit(event) {
         event.preventDefault();
-        search();
+        search(city);
     }
     
     function handleChangeCity(event) {
