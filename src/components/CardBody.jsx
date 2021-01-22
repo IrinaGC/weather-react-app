@@ -8,7 +8,7 @@ import ControlledTabs from "./ControlledTabs"
 export default function CardBody() {
     return ( 
     <div className = "card-body CardBody" >
-        <Form />
+        <Form defaultCity="London" />
         <Weather />
         <ControlledTabs />
     </div>

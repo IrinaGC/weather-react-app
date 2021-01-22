@@ -7,7 +7,7 @@ export default function LocationCity(props) {
   const [weatherData, setWeatherData]= useState({});
   function handleResponse(response){
     console.log(response.data)
-    setWeatherData = {
+    let locationData = {
       city: "London",
       country: "UK",
       day: "Monday",

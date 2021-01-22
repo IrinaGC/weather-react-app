@@ -1,19 +1,16 @@
-import React, {useState}from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import Weather from "./Weather"
 import "./Form.css";
-import ControlledTabs from "./ControlledTabs";
-
 
 export default function Form(props) {
-    const [weatherData, setWeatherData]= useState({ready: false});
-    const [city, setCity]=useState(props.defaultCity)
+    const [weatherData, setWeatherData] = useState({ready: false});
+    const [city, setCity] = useState(props.defaultCity)
 
     function handleResponse (response){
-        ControlledTabs.log(response.data)
-        setWeatherData = {
-            ready : true,
-            city: response.data.name,
+        console.log(response.data)
+        setWeatherData({
+            ready: true,
             country: response.data.sys.country,
             date: new Date(response.data.dt * 1000),
             temperature: response.data.main.temp,
@@ -22,26 +19,31 @@ export default function Form(props) {
             dayTemp: response.data.main.temp_max,
             nightTemp: response.data.main.temp_min,
             humidity: response.data.main.humidity,
-            wind: response.data.wind.speed
-        }
+            wind: response.data.wind.speed,
+            location: response.data.name,
+        });
     }
     
-    function search () {
-        const apiKey = "7f1fb29d77f5407fed4c3366666373e5";
-        let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-        axios
-        .get(apiLink)
-        .then(handleResponse);
+    
+    function handleSubmit(event) {
+        event.preventDefault();
+        search();
     }
-
+    
     function handleChangeCity(event) {
-        setCity(event.target.value)
+        setCity(event.target.value);
     }
-
-
+    
+    function search() {
+        const apiKey = "75cf8c7a314c4f9b630e483a84924871";
+        let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+        axios.get(apiLink).then(handleResponse);
+    }
+    
     if (weatherData.ready) {
+        return (
       <div className = "Form">
-        <form className = "row">
+        <form className = "row" onSubmit={handleSubmit}>
 
             <div className = "col-6">
                 <input type = "text"
@@ -65,10 +67,11 @@ export default function Form(props) {
                 </button>
             </div>
         </form>
-        <Weather data={weatherData}/>
-    </div>  
+        <Weather data={weatherData} />
+        </div>
+    );
     } else {
     search();
-    return "Your weather is LOADING..."
+    return "Loading your weather...";
     }
 }
