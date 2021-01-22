@@ -1,18 +1,31 @@
 import React from "react";
+
 import "./Weather.css";
 
-export default function Weather() {
-    let weatherData = {
-        temperature: "2",
-        iconUrl: "https://ssl.gstatic.com/onebox/weather/64/rain_light.png",
-        state: "Sunny",
-        dayTemp: "3",
-        nightTemp: "0",
-        humidity: "86",
-        wind: "10"
-    };
-    return ( 
-    <div className = "Weather row">
+export default function Weather(props) {
+let locationData = {
+      city: "London",
+      country: "UK",
+      day: "Monday",
+      date: "07 Dec",
+      time: "21:25"
+  }
+  
+
+    return (
+    <div className = "Weather">
+    <div className = "LocationCity">
+    
+    <h1 className = "card-title current-location">
+        {locationData.city}, {locationData.country} 
+    </h1>
+
+    <h6 className = "card-title">
+        {locationData.day}・ {locationData.date}・ {locationData.time} 
+   
+    </h6> 
+</div>
+    <div> 
         <p className = "card-text col-6" >
             <span className = "currentWeather" > 🌤 {weatherData.temperature} 
             <a href = "/"
@@ -47,7 +60,7 @@ export default function Weather() {
                 Wind: {weatherData.wind}km / h 
             </li>
         </ul>
-        
+        </div>
     </div>
     );
 }

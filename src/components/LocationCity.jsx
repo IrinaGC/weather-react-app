@@ -1,13 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import "./LocationCity.css";
 
-export default function LocationCity() {
-  let locationData = {
-    city: "London",
-    country: "UK",
-    day: "Monday",
-    date: "07 Dec",
-    time: "21:25"
+
+
+export default function LocationCity(props) {
+  const [weatherData, setWeatherData]= useState({});
+  function handleResponse(response){
+    console.log(response.data)
+    setWeatherData = {
+      city: "London",
+      country: "UK",
+      day: "Monday",
+      date: "07 Dec",
+      time: "21:25"
+  }
+  
   };
 
   return ( 

@@ -13,7 +13,7 @@
     background-color: transparent;
     color: white;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    border-bottom: tomato;
+    border-bottom: 1px solid tomato;
 }
 .nav-tabs {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
