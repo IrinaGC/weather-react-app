@@ -9,9 +9,10 @@ export default function Weather(props) {
         </h1>
         <h6 className = "card-title">
                 Day - Time
-        </h6> 
-        
+        </h6>
 
+
+    <div class="row">
         <p className = "card-text col-6" >
             <span className = "currentWeather" > 
             🌤 {Math.round(props.data.temperature)}
@@ -47,6 +48,7 @@ export default function Weather(props) {
                 Wind: {props.data.wind}km / h 
             </li>
         </ul>
+        </div>
         </div>
         );
 }
