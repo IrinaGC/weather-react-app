@@ -12,7 +12,7 @@ export default function Form(props) {
         setWeatherData({
             ready: true,
             country: response.data.sys.country,
-            date: new Date(response.data.dt * 1000),
+            date: new Date((response.data.dt+response.data.timezone)*1000),
             temperature: response.data.main.temp,
             iconUrl: response.data.weather[0].icon,
             state: response.data.weather[0].description,

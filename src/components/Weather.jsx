@@ -1,4 +1,5 @@
 import React from "react";
+import DateAndTime from "./DateAndTime";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -8,10 +9,10 @@ export default function Weather(props) {
             {props.data.location} , {props.data.country}
         </h1>
         <h6 className = "card-title">
-                Day - Time
+            <DateAndTime date={props.data.date} />
         </h6>
-    <div class="row">
-        <p className = "card-text col-6" >
+    <div className="row">
+        <p className = "card-text col-5" >
             <span className = "currentWeather" > 
             🌤 {Math.round(props.data.temperature)}
             <a href = "/"
@@ -31,10 +32,10 @@ export default function Weather(props) {
                 <span id = "currentState"> {props.data.state} </span>
             </li >
             <li>
-                Day: {props.data.dayTemp}º↑
+                Day: {Math.round(props.data.dayTemp)}º↑
             </li> 
             <li>
-                Night: {props.data.nightTemp}º↓
+                Night: {Math.round(props.data.nightTemp)}º↓
             </li>    
         </ul>
 
