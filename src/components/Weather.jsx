@@ -1,5 +1,6 @@
 import React from "react";
 import DateAndTime from "./DateAndTime";
+import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -13,8 +14,8 @@ export default function Weather(props) {
         </h6>
     <div className="row">
         <p className = "card-text col-5" >
-            <span className = "currentWeather" > 
-            🌤 {Math.round(props.data.temperature)}
+            <div className = "currentWeather" > 
+             <WeatherIcon icon={props.data.icon} /> {Math.round(props.data.temperature)}
             <a href = "/"
             id = "celcius"
             className = "active">
@@ -24,7 +25,7 @@ export default function Weather(props) {
             id = "fahrenheit" >
                 ºF 
             </a>
-            </span> 
+            </div> 
         </p>
 
         <ul className = "card-text col-0.5">

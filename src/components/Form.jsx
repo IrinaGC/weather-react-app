@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import Weather from "./Weather"
+import Weather from "./Weather";
 import "./Form.css";
 
 export default function Form(props) {
@@ -8,13 +8,12 @@ export default function Form(props) {
     const [city, setCity] = useState(props.defaultCity);
 
     function handleResponse (response){
-        console.log(response.data);
         setWeatherData({
             ready: true,
             country: response.data.sys.country,
             date: new Date((response.data.dt+response.data.timezone)*1000),
             temperature: response.data.main.temp,
-            iconUrl: response.data.weather[0].icon,
+            icon: response.data.weather[0].icon,
             state: response.data.weather[0].description,
             dayTemp: response.data.main.temp_max,
             nightTemp: response.data.main.temp_min,
