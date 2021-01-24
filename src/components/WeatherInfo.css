@@ -1,0 +1,14 @@
+.currentWeather {
+    font-size: 60px;
+}
+
+.currentWeather .active {
+    color: white;
+    cursor: default;
+}
+
+#fahrenheit,
+#celcius {
+    font-size: 20px;
+    text-decoration: none;
+}
