@@ -19,7 +19,7 @@ function showCelsius(event) {
 if (unit === "celsius") {
     return(
 <div className="WeatherInfo row">
-    <div className = "card-text col-6" >  
+    <div className = "card-text col-3" >  
         <span className="temperature currentWeather">
         {Math.round(props.celsius)}
         </span>
@@ -29,7 +29,9 @@ if (unit === "celsius") {
             ºF
         </a>
         </span>
-        <ul className = "card-text col-6">
+    </div>
+     <div className = "card-text col-4">   
+        <ul >
             <li>
                 {Math.round(props.day)}º↑ | {Math.round(props.night)}º↓
             </li>
@@ -37,22 +39,38 @@ if (unit === "celsius") {
                 Humidity: {props.humidity}% 
             </li> 
             <li>
-                Wind: {props.wind}km / h 
+                Wind: {props.wind} km/h 
             </li>
         </ul>
     </div>
-</div> 
+    </div>
+
 );
 } else {
 return (
-    <div className = "WeatherInfo currentWeather" >
-    <span className="temperature">{Math.round(Converter(props.celsius))}</span>
-    <span className="unit">
+    <div className = "WeatherInfo row">
+    <div className="cart-text col-4">  
+        <span className="temperature currentWeather">{Math.round(Converter(props.celsius))}</span>
+        <span className="unit currentWeather">
         ºF.
        <a href = "/" id = "celcius" onClick={showCelsius}>
            ºC
         </a>
-    </span>
+        </span>
+    </div> 
+    <div className = "card-text col-4">   
+        <ul >
+            <li>
+                {Math.round(Converter(props.day))}º↑ | {Math.round(Converter(props.night))}º↓
+            </li>
+            <li>
+                Humidity: {props.humidity}% 
+            </li> 
+            <li>
+                Wind: {Math.round(props.wind / 1.609)} m/h 
+            </li>
+        </ul>
+    </div>
     </div>
 );
 }
