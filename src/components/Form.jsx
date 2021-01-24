@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Weather from "./Weather";
+import ControlledTabs from "./ControlledTabs";
 import "./Form.css";
 
 export default function Form(props) {
@@ -67,6 +68,8 @@ export default function Form(props) {
             </div>
         </form>
         <Weather data={weatherData} />
+        <ControlledTabs data={weatherData.location} />
+
         </div>
     );
     } else {

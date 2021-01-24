@@ -1,6 +1,6 @@
 import './App.css';
 import Form from "./Form";
-import ControlledTabs from "./ControlledTabs";
+
 
 function App() {
   return (
@@ -9,7 +9,6 @@ function App() {
       <div className = "card">
         <div className = "card-body CardBody">
           <Form defaultCity="London" />
-          <ControlledTabs />
         </div>
       </div>
     <p className="footer" >
