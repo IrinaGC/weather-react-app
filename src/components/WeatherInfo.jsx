@@ -21,12 +21,10 @@ if (unit === "celsius") {
 <div className="WeatherInfo row">
     <div className = "card-text col-3" >  
         <span className="temperature currentWeather">
-        {Math.round(props.celsius)}
+        {Math.round(props.celsius)}º
         </span>
-        <span className="unit currentWeather">
-        ºC.
-        <a href = "/" id = "fahrenheit" onClick={showFahrenheit}>
-            ºF
+        <span className="unit">
+        C | {" "}<a href = "/" id = "fahrenheit" onClick={showFahrenheit}>F
         </a>
         </span>
     </div>
@@ -39,7 +37,7 @@ if (unit === "celsius") {
                 Humidity: {props.humidity}% 
             </li> 
             <li>
-                Wind: {props.wind} km/h 
+                Wind: {Math.round(props.wind)} km/h 
             </li>
         </ul>
     </div>
@@ -49,12 +47,12 @@ if (unit === "celsius") {
 } else {
 return (
     <div className = "WeatherInfo row">
-    <div className="cart-text col-4">  
-        <span className="temperature currentWeather">{Math.round(Converter(props.celsius))}</span>
-        <span className="unit currentWeather">
-        ºF.
+    <div className="cart-text col-3">  
+        <span className="temperature currentWeather">{Math.round(Converter(props.celsius))}º</span>
+        <span className="unit">
+        F | {" "}
        <a href = "/" id = "celcius" onClick={showCelsius}>
-           ºC
+           C
         </a>
         </span>
     </div> 
