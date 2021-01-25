@@ -9,10 +9,11 @@ export default function Form(props) {
     const [city, setCity] = useState(props.defaultCity);
 
     function handleResponse (response){
+        console.log(response.data);
         setWeatherData({
             ready: true,
             country: response.data.sys.country,
-            date: new Date((response.data.dt+response.data.timezone)*1000),
+            date: new Date((response.data.dt)*1000),
             temperature: response.data.main.temp,
             icon: response.data.weather[0].icon,
             state: response.data.weather[0].description,
@@ -21,13 +22,15 @@ export default function Form(props) {
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             location: response.data.name,
+            lon: response.data.coord.lon,
+            lat: response.data.coord.lat,
         });
     }
     
     
     function handleSubmit(event) {
         event.preventDefault();
-        search(city);
+        search();
     }
     
     function handleChangeCity(event) {
@@ -68,7 +71,7 @@ export default function Form(props) {
             </div>
         </form>
         <Weather data={weatherData} />
-        <ControlledTabs city={weatherData.location} />
+        <ControlledTabs city={weatherData.location} lat={weatherData.lat} lon={weatherData.lon} />
 
         </div>
     );
