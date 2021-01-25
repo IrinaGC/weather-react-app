@@ -62,13 +62,13 @@ export default function Form(props) {
                 </button> 
             </div>
 
-            <div className = "col-5">
-                <button type = "submit" className = "btn btn-outline-secondary mb-2">Current Location
+            <div className = "col-2">
+                <button type = "submit" className = "btn btn-outline-secondary mb-2">C L
                 </button>
             </div>
         </form>
         <Weather data={weatherData} />
-        <ControlledTabs data={weatherData.location} />
+        <ControlledTabs city={weatherData.location} />
 
         </div>
     );

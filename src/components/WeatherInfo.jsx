@@ -19,7 +19,7 @@ function showCelsius(event) {
 if (unit === "celsius") {
     return(
 <div className="WeatherInfo row">
-    <div className = "card-text col-3" >  
+    <div className = "card-text col-4" >  
         <span className="temperature currentWeather">
         {Math.round(props.celsius)}º
         </span>
@@ -28,7 +28,7 @@ if (unit === "celsius") {
         </a>
         </span>
     </div>
-     <div className = "card-text col-4">   
+     <div className = "card-text col-5">   
         <ul >
             <li>
                 {Math.round(props.day)}º↑ | {Math.round(props.night)}º↓
@@ -47,7 +47,7 @@ if (unit === "celsius") {
 } else {
 return (
     <div className = "WeatherInfo row">
-    <div className="cart-text col-3">  
+    <div className="cart-text col-4">  
         <span className="temperature currentWeather">{Math.round(Converter(props.celsius))}º</span>
         <span className="unit">
         F | {" "}
@@ -56,7 +56,7 @@ return (
         </a>
         </span>
     </div> 
-    <div className = "card-text col-4">   
+    <div className = "card-text col-5">   
         <ul >
             <li>
                 {Math.round(Converter(props.day))}º↑ | {Math.round(Converter(props.night))}º↓

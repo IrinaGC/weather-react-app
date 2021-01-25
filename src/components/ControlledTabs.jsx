@@ -9,6 +9,7 @@ export default function ControlledTabs(props) {
   const [key, setKey] = useState('home');
 
   return (
+    
     <Tabs
       id="controlled-tab-example"
       activeKey={key}
@@ -16,7 +17,7 @@ export default function ControlledTabs(props) {
       className="Tabs"
     >
       <Tab eventKey="hourly" title="Hourly" area-selected="true" className="Tab nav-item nav-link">
-     <TabsContentHourly data={props.city}/>
+      <TabsContentHourly data={props.city}/>
       </Tab>
       <Tab eventKey="daily" title="Daily" className="Tab nav-item nav-link">
         
