@@ -62,7 +62,7 @@ export default function Form(props) {
       <div className = "Form">
         <form className = "row" onSubmit={handleSubmit}>
 
-            <div className = "col-6">
+            <div className = "col-9">
                 <input type = "text"
                 className = "form-control"
                 autoComplete = "off"

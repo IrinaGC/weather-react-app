@@ -7,9 +7,9 @@ import "./Weather.css";
 export default function Weather(props) {
     return (
     <div className = "Weather">
-        <h1 className = "card-title current-location">
+        <h1 className = "card-title current-location ">
            
-           {props.data.location} , {props.data.country}
+           <strong>{props.data.location}</strong> {props.data.country}
         </h1>
         <h6 className = "card-title">
             <DateAndTime date={props.data.date} />
