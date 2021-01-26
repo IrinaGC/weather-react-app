@@ -80,11 +80,11 @@ export default function Form(props) {
                 </button> 
             </div>
 
+        </form>
             <div className = "col-2">
                 <button type = "submit" className = "btn btn-outline-secondary mb-2" onClick={getCurrentLocation}>C L
                 </button>
             </div>
-        </form>
         <Weather data={weatherData} />
         <ControlledTabs city={weatherData.location} lat={weatherData.lat} lon={weatherData.lon} />
 
