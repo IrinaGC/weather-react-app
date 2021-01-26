@@ -25,7 +25,7 @@ function temp() {
     return(
         <div className="col">
         {day()}
-        <WeatherIcon icon={props.data.weather[0].icon} />
+        <WeatherIcon icon={props.data.weather[0].icon} size={56} />
         {temp()}
         </div>
     );

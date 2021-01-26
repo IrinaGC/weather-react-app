@@ -19,7 +19,7 @@ function temperature() {
     return(
         <div className="col">
         {hours()}
-        <WeatherIcon icon={props.data.weather[0].icon} />
+        <WeatherIcon icon={props.data.weather[0].icon} size={56}/>
         {temperature()}
         </div>
     );
