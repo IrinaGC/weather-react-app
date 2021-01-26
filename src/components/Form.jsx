@@ -26,7 +26,6 @@ export default function Form(props) {
         });
     }
 
-
     
     function search() {
         const apiKey = "75cf8c7a314c4f9b630e483a84924871";
@@ -49,8 +48,8 @@ export default function Form(props) {
     }
     
     function currentLocation(response) {
-        let latitude = response.coords.latitude;
-        let longitude = response.coords.longide;
+        const latitude = response.coords.latitude;
+        const longitude = response.coords.longitude;
         const apiKey = "75cf8c7a314c4f9b630e483a84924871";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
@@ -80,11 +79,11 @@ export default function Form(props) {
                 </button> 
             </div>
 
-        </form>
             <div className = "col-2">
-                <button type = "submit" className = "btn btn-outline-secondary mb-2" onClick={getCurrentLocation}>C L
+                <button className = "btn btn-outline-secondary mb-2" onClick={getCurrentLocation}>C L
                 </button>
             </div>
+        </form>
         <Weather data={weatherData} />
         <ControlledTabs city={weatherData.location} lat={weatherData.lat} lon={weatherData.lon} />
 
