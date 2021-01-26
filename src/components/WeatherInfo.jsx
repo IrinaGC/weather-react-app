@@ -14,6 +14,15 @@ function showFahrenheit(event) {
 function showCelsius(event) {
     event.preventDefault();
     setUnit("celsius");
+
+}
+
+function celsius() {
+    let celsius = Math.round(props.celsius);
+    if (celsius > 0 && celsius < 10) {
+        celsius = `0${celsius}`;
+    }
+    return `${celsius}`
 }
 
 if (unit === "celsius") {
@@ -22,7 +31,7 @@ if (unit === "celsius") {
 <div className = "card-text">
     <ul className = "horizontal-list">
         <li className = "temperature">
-            <span className="currentWeather">{Math.round(props.celsius)}º</span>
+            <span className="currentWeather">{celsius()}º</span>
             <span className="unit">
             C | {" "}<a href = "/" id = "fahrenheit" onClick={showFahrenheit}>F
             </a>
