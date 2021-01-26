@@ -26,28 +26,12 @@ export default function Form(props) {
         });
     }
 
-    function handleResponseGPS (response){
-        setWeatherData({
-            ready: true,
-            country: response.data.sys.country,
-            date: new Date((response.data.dt)*1000),
-            temperature: response.data.main.temp,
-            icon: response.data.weather[0].icon,
-            state: response.data.weather[0].description,
-            dayTemp: response.data.main.temp_max,
-            nightTemp: response.data.main.temp_min,
-            humidity: response.data.main.humidity,
-            wind: response.data.wind.speed,
-            location: response.data.name,
-            lon: response.data.coord.lon,
-            lat: response.data.coord.lat,
-        });
-    }
+
     
     function search() {
         const apiKey = "75cf8c7a314c4f9b630e483a84924871";
         let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-        axios.get(apiLink).then(handleResponseGPS);
+        axios.get(apiLink).then(handleResponse);
     }
     
     function handleSubmit(event) {
