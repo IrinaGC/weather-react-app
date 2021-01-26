@@ -3,36 +3,30 @@ import WeatherIcon from "./WeatherIcon";
 
 
 export default function ForecastDailyPreview(props) {
-function hours(){
+function day(){
     let date = new Date(props.data.dt * 1000);
-    let dateDay = date.getDate();
-    let month = date.getMonth();
-    let months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    let day = date.getDay();
+    let weekDays = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
   ];
-    return `${dateDay} ${months[month]}`;
+    return `${weekDays[day]}`;
 }
-function temperature() {
+function temp() {
     let temperature = Math.round(props.data.temp.day);
     return `${temperature}ºC`;
 }
 
     return(
         <div className="col">
-        {hours()}
+        {day()}
         <WeatherIcon icon={props.data.weather[0].icon} />
-        {temperature()}
+        {temp()}
         </div>
     );
 }
