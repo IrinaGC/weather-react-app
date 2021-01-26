@@ -9,7 +9,24 @@ export default function Form(props) {
     const [city, setCity] = useState(props.defaultCity);
 
     function handleResponse (response){
-        console.log(response.data);
+        setWeatherData({
+            ready: true,
+            country: response.data.sys.country,
+            date: new Date((response.data.dt)*1000),
+            temperature: response.data.main.temp,
+            icon: response.data.weather[0].icon,
+            state: response.data.weather[0].description,
+            dayTemp: response.data.main.temp_max,
+            nightTemp: response.data.main.temp_min,
+            humidity: response.data.main.humidity,
+            wind: response.data.wind.speed,
+            location: response.data.name,
+            lon: response.data.coord.lon,
+            lat: response.data.coord.lat,
+        });
+    }
+
+    function handleResponseGPS (response){
         setWeatherData({
             ready: true,
             country: response.data.sys.country,
@@ -27,6 +44,11 @@ export default function Form(props) {
         });
     }
     
+    function search() {
+        const apiKey = "75cf8c7a314c4f9b630e483a84924871";
+        let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+        axios.get(apiLink).then(handleResponseGPS);
+    }
     
     function handleSubmit(event) {
         event.preventDefault();
@@ -36,12 +58,21 @@ export default function Form(props) {
     function handleChangeCity(event) {
         setCity(event.target.value);
     }
-    
-    function search() {
-        const apiKey = "75cf8c7a314c4f9b630e483a84924871";
-        let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-        axios.get(apiLink).then(handleResponse);
+
+    function getCurrentLocation(event) {
+        event.preventDefault();
+        navigator.geolocation.getCurrentPosition(currentLocation);   
     }
+    
+    function currentLocation(response) {
+        let latitude = response.coords.latitude;
+        let longitude = response.coords.longide;
+        const apiKey = "75cf8c7a314c4f9b630e483a84924871";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(handleResponse);
+        
+    }
+
     
     if (weatherData.ready) {
         return (
@@ -66,7 +97,7 @@ export default function Form(props) {
             </div>
 
             <div className = "col-2">
-                <button type = "submit" className = "btn btn-outline-secondary mb-2">C L
+                <button type = "submit" className = "btn btn-outline-secondary mb-2" onClick={getCurrentLocation}>C L
                 </button>
             </div>
         </form>
