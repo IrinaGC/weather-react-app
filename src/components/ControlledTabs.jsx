@@ -18,10 +18,10 @@ export default function ControlledTabs(props) {
       className="Tabs"
     >
       <Tab eventKey="hourly" title="Hourly" className="Tab nav-item nav-link">
-      <TabsContentHourly data={props.city} lon={props.lon} lat={props.lat} />
+      <TabsContentHourly data={props.city} />
       </Tab>
       <Tab eventKey="daily" title="Daily" className="Tab nav-item nav-link">
-      <TabsContentDaily data={props.city} lon={props.lon} lat={props.lat} />
+      <TabsContentDaily lon={props.lon} lat={props.lat} />
       </Tab>
     </Tabs>
   );

@@ -5,8 +5,23 @@ import WeatherIcon from "./WeatherIcon";
 export default function ForecastDailyPreview(props) {
 function hours(){
     let date = new Date(props.data.dt * 1000);
-    let hours = date.getDay();
-    return `${hours}:00`;
+    let dateDay = date.getDate();
+    let month = date.getMonth();
+    let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+    return `${dateDay} ${months[month]}`;
 }
 function temperature() {
     let temperature = Math.round(props.data.temp.day);
