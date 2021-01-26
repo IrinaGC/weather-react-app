@@ -18,56 +18,62 @@ function showCelsius(event) {
 
 if (unit === "celsius") {
     return(
-<div className="WeatherInfo row">
-    <div className = "card-text col-4" >  
-        <span className="temperature currentWeather">
-        {Math.round(props.celsius)}º
-        </span>
-        <span className="unit">
-        C | {" "}<a href = "/" id = "fahrenheit" onClick={showFahrenheit}>F
-        </a>
-        </span>
-    </div>
-     <div className = "card-text col-5">   
-        <ul >
-            <li>
-                {Math.round(props.day)}º↑ | {Math.round(props.night)}º↓
-            </li>
-            <li>
-                Humidity: {props.humidity}% 
-            </li> 
-            <li>
-                Wind: {Math.round(props.wind)} km/h 
-            </li>
-        </ul>
+<div className="WeatherInfo">
+<div className = "card-text">
+    <ul className = "horizontal-list">
+        <li className = "temperature">
+            <span className="currentWeather">{Math.round(props.celsius)}º</span>
+            <span className="unit">
+            C | {" "}<a href = "/" id = "fahrenheit" onClick={showFahrenheit}>F
+            </a>
+            </span>
+        </li>
+        <li className = "weather-conditions">   
+            <ul >
+                <li>
+                    {Math.round(props.day)}º↑ | {Math.round(props.night)}º↓
+                </li>
+                <li>
+                    Humidity: {props.humidity}% 
+                </li> 
+                <li>
+                    Wind: {Math.round(props.wind)} km/h 
+                </li>
+            </ul>
+        </li>
+    </ul> 
     </div>
     </div>
 
 );
 } else {
 return (
-    <div className = "WeatherInfo row">
-    <div className="cart-text col-4">  
-        <span className="temperature currentWeather">{Math.round(Converter(props.celsius))}º</span>
-        <span className="unit">
-        F | {" "}
-       <a href = "/" id = "celcius" onClick={showCelsius}>
+    <div className = "WeatherInfo">
+    <div className = "card-text">
+    <ul className = "horizontal-list">  
+        <li className = "temperature"> 
+            <span className="currentWeather">{Math.round(Converter(props.celsius))}º</span>
+            <span className="unit">
+            F | {" "}
+            <a href = "/" id = "celcius" onClick={showCelsius}>
            C
-        </a>
-        </span>
-    </div> 
-    <div className = "card-text col-5">   
-        <ul >
-            <li>
+            </a>
+            </span>
+        </li>
+        <li className = "weather-conditions">   
+            <ul >
+                <li>
                 {Math.round(Converter(props.day))}º↑ | {Math.round(Converter(props.night))}º↓
-            </li>
-            <li>
+                </li>
+                <li>
                 Humidity: {props.humidity}% 
-            </li> 
-            <li>
+                </li> 
+                <li>
                 Wind: {Math.round(props.wind / 1.609)} m/h 
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
     </div>
     </div>
 );

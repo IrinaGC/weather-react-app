@@ -15,8 +15,8 @@ export default function Weather(props) {
             <DateAndTime date={props.data.date} />
         </h6>
         <ul>
-            <li><WeatherIcon icon={props.data.icon} /></li>
-            <li>{props.data.state}</li>
+            <li className="icon"><WeatherIcon icon={props.data.icon} /></li>
+            <li className="state">{props.data.state}</li>
             <li><WeatherInfo celsius={props.data.temperature} day={props.data.dayTemp} night={props.data.nightTemp} wind={props.data.wind} humidity={props.data.humidity} /></li>
         </ul>
 
