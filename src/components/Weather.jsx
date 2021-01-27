@@ -7,13 +7,16 @@ import "./Weather.css";
 export default function Weather(props) {
     return (
     <div className = "Weather">
+        <div className="city">
         <h1 className = "card-title current-location ">
            
            <strong>{props.data.location}</strong> {props.data.country}
         </h1>
         <h6 className = "card-title">
+            
             <DateAndTime date={props.data.date} />
         </h6>
+        </div>
         <ul>
             <li className="icon"><WeatherIcon icon={props.data.icon} size={200} /></li>
             <li className="state">{props.data.state}</li>

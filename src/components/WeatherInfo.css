@@ -3,24 +3,31 @@
     display: block;
     margin: 0 auto;
     width: 300px;
+    
 }
 ul.horizontal-list {
 min-width: 320px;
 list-style: none;
 padding: 20px 0;
+background: transparent;
 }
 
 li.temperature, li.weather-conditions {
     display:inline-block;
+    
 }
 
+li.weather-conditions ul{
+    padding: 5px;
+    background: transparent;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: #dee2e6 #dee2e6 #fff;
+    margin-left: 3px;
+}
 .currentWeather {
     font-size: 80px;
 }
-li.weather-conditions ul{
-    padding: 5px;
-}
-
 .currentWeather .active {
     color: white;
     cursor: default;
