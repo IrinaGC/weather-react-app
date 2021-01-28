@@ -86,7 +86,7 @@ export default function Form(props) {
 
             <div className = "col-2">
                 <button className = "btn btn-outline-secondary mb-2" onClick={getCurrentLocation}><span role = "img" aria-label = "current-location">
-                        <FontAwesomeIcon icon="map-marker-alt"/>
+                        <FontAwesomeIcon icon="map-marker-alt" className = "icon-map" />
                     </span>
                 </button>
             </div>
