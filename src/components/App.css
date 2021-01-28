@@ -1,4 +1,6 @@
 .card {
+  display: block;
+  margin: 0 auto;
   width: 600px;
   /*background-image: linear-gradient(15deg, #13547a 10%, #80d0c7 70%);*/
   font-family: "Montserrat", sans-serif;
@@ -20,4 +22,7 @@
   font-size: 13px;
   margin-top: 5px;
   font-family: monospace;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
