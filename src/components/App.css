@@ -8,6 +8,12 @@
   }
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
 .card {
   display: block;
   margin: 0 auto;
