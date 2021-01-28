@@ -9,7 +9,6 @@ export default function TabsContentDaily(props) {
     const [forecast, setForecast]=useState(null);
 
     function handleResponse(response) {
-        console.log(response.data);
         setForecast(response.data);
         setLoaded(true);
         
