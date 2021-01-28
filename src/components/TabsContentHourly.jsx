@@ -28,7 +28,7 @@ export default function TabsContentHourly(props) {
     axios.get(apiUrl).then(handleResponse);
     return(
         <div>   
-            `Hello`
+            'Loading...'
 
         </div>
 

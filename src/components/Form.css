@@ -6,9 +6,10 @@ form {
     color: #666666;
     border:1px solid;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    border: 2px solid;
+    border: 1px solid;
     border-color: #dee2e6 #dee2e6 #fff;
     border-radius: 10px;
+    text-shadow: 3px 3px 3px rgba(163, 2, 1, 0.4);
 }
 
 .btn:hover {
@@ -19,4 +20,5 @@ form {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(0, 0, 0, 0.125);
     border-radius: 10px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }

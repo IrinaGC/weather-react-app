@@ -10,6 +10,8 @@ min-width: 320px;
 list-style: none;
 padding: 20px 0;
 background: transparent;
+box-shadow: none;
+border: none;
 }
 
 li.temperature, li.weather-conditions {
@@ -18,12 +20,16 @@ li.temperature, li.weather-conditions {
 }
 
 li.weather-conditions ul{
+
     padding: 5px;
     background: transparent;
+    box-shadow: none;
+    border-top: none;
+    border-bottom: none;
     border-left: 2px solid;
     border-right: 2px solid;
     border-color: #dee2e6 #dee2e6 #fff;
-    margin-left: 3px;
+    margin-left: 10px;
 }
 .currentWeather {
     font-size: 80px;

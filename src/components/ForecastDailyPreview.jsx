@@ -18,8 +18,9 @@ function day(){
     return `${weekDays[day]}`;
 }
 function temp() {
-    let temperature = Math.round(props.data.temp.day);
-    return `${temperature}ºC`;
+    let temperatureMax = Math.round(props.data.temp.max);
+    let temperatureMin = Math.round(props.data.temp.min);
+    return <span><strong>{temperatureMax}º</strong>/{temperatureMin}º</span>;
 }
 
     return(

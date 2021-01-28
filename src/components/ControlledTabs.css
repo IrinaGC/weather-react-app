@@ -2,7 +2,7 @@
 
 .Tab {
     background-color: rgba(255, 255, 255, 0.45);
-   border: 5px solid  rgba(0, 0, 0, 0.125);
+   
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     border-radius: 10px;
@@ -10,16 +10,17 @@
 }
 
 .nav-tabs .nav-link {
-    color: #ff1b1c;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid;
     border-color: #dee2e6 #dee2e6 #fff;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.45);
-    margin-bottom: 10px;
-    text-align: center;
+    color: #ff1b1c;
     font-size: 20px;
     font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(163, 2, 1, 0.4);
 }
 .nav-tabs {
     border-bottom: none;

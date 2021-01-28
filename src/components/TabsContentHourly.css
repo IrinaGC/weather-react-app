@@ -1,8 +1,9 @@
 .col canvas {
     text-align: center;
     margin: 10px 0;
+    
 }
 .col {
     text-align: center;
-    
+    text-shadow: 3px 3px 3px rgba(163, 2, 1, 0.4);
 }

@@ -40,10 +40,10 @@ if (unit === "celsius") {
         <li className = "weather-conditions">   
             <ul >
                 <li>
-                    {Math.round(props.day)}º↑ | {Math.round(props.night)}º↓
+                    {Math.round(props.day)}º↑ {" "} | {" "} {Math.round(props.night)}º↓
                 </li>
                 <li>
-                    Humidity: {props.humidity}% 
+                    Humidity: {props.humidity} % 
                 </li> 
                 <li>
                     Wind: {Math.round(props.wind)} km/h 
@@ -72,10 +72,10 @@ return (
         <li className = "weather-conditions">   
             <ul >
                 <li>
-                {Math.round(Converter(props.day))}º↑ | {Math.round(Converter(props.night))}º↓
+                {Math.round(Converter(props.day))}º↑ {" "} | {" "} {Math.round(Converter(props.night))}º↓
                 </li>
                 <li>
-                Humidity: {props.humidity}% 
+                Humidity: {props.humidity} % 
                 </li> 
                 <li>
                 Wind: {Math.round(props.wind / 1.609)} m/h 

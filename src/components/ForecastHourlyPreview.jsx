@@ -12,8 +12,9 @@ function hours(){
     return `${hours}:00`;
 }
 function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-    return `${temperature}ºC`;
+    let temperatureMax = Math.round(props.data.main.temp_max);
+    let temperatureMin = Math.round(props.data.main.temp_min);
+    return <span><strong>{temperatureMax}º</strong>/{temperatureMin}º</span>;
 }
 
     return(
