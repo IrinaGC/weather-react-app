@@ -3,13 +3,13 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .card {
+  .card, .footer {
     max-width: 100%;
   }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .card {
+  .card, .footer{
     max-width: 100%;
   }
 }
