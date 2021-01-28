@@ -25,7 +25,7 @@ li.weather-conditions ul{
     background: transparent;
     box-shadow: none;
     border: none;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 .currentWeather {
     font-size: 80px;
