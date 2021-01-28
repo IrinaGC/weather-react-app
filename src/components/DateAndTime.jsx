@@ -40,7 +40,7 @@ export default function DateAndTime(props){
 
   return (
       <div>
-          {day}・{date} {month}・{hours}:{minutes} (last update)
+          {day} | {month} {date} | {hours}:{minutes} (last update)
       </div>
   );
 }
