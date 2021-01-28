@@ -20,7 +20,7 @@ function day(){
 function temp() {
     let temperatureMax = Math.round(props.data.temp.max);
     let temperatureMin = Math.round(props.data.temp.min);
-    return <span><strong>{temperatureMax}º</strong>/{temperatureMin}º</span>;
+    return <span><strong>{temperatureMax}º</strong> | {temperatureMin}º</span>;
 }
 
     return(

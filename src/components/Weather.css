@@ -50,7 +50,9 @@ div.city {
     margin: 0 auto;
 }
 
-
+.icon {
+    margin-top: 5px;
+}
 
 .icon, .state {
     text-align: center;

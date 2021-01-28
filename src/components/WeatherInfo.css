@@ -24,12 +24,8 @@ li.weather-conditions ul{
     padding: 5px;
     background: transparent;
     box-shadow: none;
-    border-top: none;
-    border-bottom: none;
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-color: #dee2e6 #dee2e6 #fff;
-    margin-left: 10px;
+    border: none;
+    margin-left: 25px;
 }
 .currentWeather {
     font-size: 80px;

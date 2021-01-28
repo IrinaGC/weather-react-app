@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Converter from "../Converter";
 import "./WeatherInfo.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export default function WeatherInfo(props){
@@ -40,13 +41,13 @@ if (unit === "celsius") {
         <li className = "weather-conditions">   
             <ul >
                 <li>
-                    {Math.round(props.day)}º↑ {" "} | {" "} {Math.round(props.night)}º↓
+                    <FontAwesomeIcon icon="temperature-high" className="high-temp"/> {" "}{Math.round(props.day)}º↑ {" "} | {" "} {Math.round(props.night)}º↓
                 </li>
                 <li>
-                    Humidity: {props.humidity} % 
+                    <FontAwesomeIcon icon="tint"/> {" "} {props.humidity} % 
                 </li> 
                 <li>
-                    Wind: {Math.round(props.wind)} km/h 
+                    <FontAwesomeIcon icon="wind" className="wind" />{" "} {" "}   {Math.round(props.wind)} km/h 
                 </li>
             </ul>
         </li>
@@ -72,13 +73,14 @@ return (
         <li className = "weather-conditions">   
             <ul >
                 <li>
+                <FontAwesomeIcon icon="temperature-high"/> {" "}
                 {Math.round(Converter(props.day))}º↑ {" "} | {" "} {Math.round(Converter(props.night))}º↓
                 </li>
                 <li>
-                Humidity: {props.humidity} % 
+                <FontAwesomeIcon icon="tint"/> {" "} {props.humidity} % 
                 </li> 
                 <li>
-                Wind: {Math.round(props.wind / 1.609)} m/h 
+                <FontAwesomeIcon icon="wind" className="wind" />{" "}  {Math.round(props.wind / 1.609)} m/h 
                 </li>
             </ul>
         </li>

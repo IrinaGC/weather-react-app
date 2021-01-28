@@ -1,5 +1,9 @@
 import './App.css';
 import Form from "./Form";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {faSearch,faMapMarkerAlt,faWind,faTemperatureHigh,faTint } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faSearch, faMapMarkerAlt,faWind, faTemperatureHigh,faTint)
 
 
 function App() {

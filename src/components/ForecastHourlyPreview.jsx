@@ -14,7 +14,7 @@ function hours(){
 function temperature() {
     let temperatureMax = Math.round(props.data.main.temp_max);
     let temperatureMin = Math.round(props.data.main.temp_min);
-    return <span><strong>{temperatureMax}º</strong>/{temperatureMin}º</span>;
+    return <span><strong>{temperatureMax}º</strong> | {temperatureMin}º</span>;
 }
 
     return(

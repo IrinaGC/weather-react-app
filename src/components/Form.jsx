@@ -3,6 +3,11 @@ import axios from "axios";
 import Weather from "./Weather";
 import ControlledTabs from "./ControlledTabs";
 import "./Form.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+library.add (faSearch)
+
 
 export default function Form(props) {
     const [weatherData, setWeatherData] = useState({ready: false});
@@ -74,14 +79,14 @@ export default function Form(props) {
             <div className = "col-1">
                 <button type = "submit" className = "btn btn-outline-secondary mb-2">
                     <span role = "img" aria-label = "search">
-                        🔍
+                        <FontAwesomeIcon icon="search" className="search-icon" />
                     </span> 
                 </button> 
             </div>
 
             <div className = "col-2">
                 <button className = "btn btn-outline-secondary mb-2" onClick={getCurrentLocation}><span role = "img" aria-label = "current-location">
-                        📍
+                        <FontAwesomeIcon icon="map-marker-alt"/>
                     </span>
                 </button>
             </div>
