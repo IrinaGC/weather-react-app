@@ -1,3 +1,13 @@
+.App {
+  margin: 10px auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
 .card {
   display: block;
   margin: 0 auto;
@@ -13,6 +23,8 @@
 }
 
 .card-body {
+  display: block;
+  margin: 0 auto;
   color: #ff1b1c;
   padding-bottom: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -20,9 +32,8 @@
 
 .footer {
   font-size: 13px;
-  margin-top: 5px;
   font-family: monospace;
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
   text-align: center;
 }
